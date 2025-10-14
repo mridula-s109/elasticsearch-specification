@@ -40,8 +40,8 @@
       },
       "default_operator": {
         "type": "enum",
-        "options": ["AND", "OR"],
-        "default": "OR",
+        "options": ["and", "or"],
+        "default": "or",
         "description": "The default operator for query string query (AND or OR)"
       },
       "df": {
@@ -83,7 +83,8 @@
       }
     },
     "body": {
-      "description": "The query definition using the Query DSL"
+      "description": "The query definition using the Query DSL",
+      "required": false
     }
   }
 }

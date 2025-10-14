@@ -2344,7 +2344,7 @@
         "name": "Request",
         "namespace": "_global.close_point_in_time"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -5769,7 +5769,7 @@
         "name": "Request",
         "namespace": "fleet.search"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -6015,7 +6015,7 @@
         "name": "Request",
         "namespace": "graph.explore"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -6298,7 +6298,7 @@
         "name": "Request",
         "namespace": "ilm.move_to_step"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -6344,7 +6344,7 @@
         "name": "Request",
         "namespace": "ilm.put_lifecycle"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -6632,7 +6632,7 @@
         "name": "Request",
         "namespace": "indices.analyze"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -8675,7 +8675,7 @@
         "name": "Request",
         "namespace": "indices.put_data_lifecycle"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -8758,7 +8758,7 @@
         "name": "Request",
         "namespace": "indices.put_data_stream_options"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -8911,6 +8911,34 @@
             "POST"
           ],
           "path": "/{index}/_mapping"
+        }
+      ]
+    },
+    {
+      "availability": {
+        "stack": {
+          "stability": "experimental",
+          "visibility": "public"
+        }
+      },
+      "description": "Configure sampling for an index or data stream",
+      "docUrl": "https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-indices-put-sample-configuration",
+      "name": "indices.put_sample_configuration",
+      "request": null,
+      "requestBodyRequired": true,
+      "requestMediaType": [
+        "application/json"
+      ],
+      "response": null,
+      "responseMediaType": [
+        "application/json"
+      ],
+      "urls": [
+        {
+          "methods": [
+            "PUT"
+          ],
+          "path": "/{index}/_sample/config"
         }
       ]
     },
@@ -9440,7 +9468,7 @@
         "name": "Request",
         "namespace": "indices.shrink"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -9577,7 +9605,7 @@
         "name": "Request",
         "namespace": "indices.split"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -9807,7 +9835,7 @@
         "name": "Request",
         "namespace": "inference.completion"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -9947,7 +9975,7 @@
         "name": "Request",
         "namespace": "inference.inference"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10050,7 +10078,7 @@
         "name": "Request",
         "namespace": "inference.put_ai21"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10096,7 +10124,7 @@
         "name": "Request",
         "namespace": "inference.put_alibabacloud"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10142,7 +10170,7 @@
         "name": "Request",
         "namespace": "inference.put_amazonbedrock"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10188,7 +10216,7 @@
         "name": "Request",
         "namespace": "inference.put_amazonsagemaker"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10234,7 +10262,7 @@
         "name": "Request",
         "namespace": "inference.put_anthropic"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10280,7 +10308,7 @@
         "name": "Request",
         "namespace": "inference.put_azureaistudio"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10326,7 +10354,7 @@
         "name": "Request",
         "namespace": "inference.put_azureopenai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10372,7 +10400,7 @@
         "name": "Request",
         "namespace": "inference.put_cohere"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10417,7 +10445,7 @@
         "name": "Request",
         "namespace": "inference.put_contextualai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10463,7 +10491,7 @@
         "name": "Request",
         "namespace": "inference.put_custom"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10509,7 +10537,7 @@
         "name": "Request",
         "namespace": "inference.put_deepseek"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10555,7 +10583,7 @@
         "name": "Request",
         "namespace": "inference.put_elasticsearch"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10605,7 +10633,7 @@
         "name": "Request",
         "namespace": "inference.put_elser"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10651,7 +10679,7 @@
         "name": "Request",
         "namespace": "inference.put_googleaistudio"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10697,7 +10725,7 @@
         "name": "Request",
         "namespace": "inference.put_googlevertexai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10743,7 +10771,7 @@
         "name": "Request",
         "namespace": "inference.put_hugging_face"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10788,7 +10816,7 @@
         "name": "Request",
         "namespace": "inference.put_jinaai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10833,7 +10861,7 @@
         "name": "Request",
         "namespace": "inference.put_llama"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10879,7 +10907,7 @@
         "name": "Request",
         "namespace": "inference.put_mistral"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10925,7 +10953,7 @@
         "name": "Request",
         "namespace": "inference.put_openai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -10970,7 +10998,7 @@
         "name": "Request",
         "namespace": "inference.put_voyageai"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11016,7 +11044,7 @@
         "name": "Request",
         "namespace": "inference.put_watsonx"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11062,7 +11090,7 @@
         "name": "Request",
         "namespace": "inference.rerank"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11103,7 +11131,7 @@
         "name": "Request",
         "namespace": "inference.sparse_embedding"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11145,7 +11173,7 @@
         "name": "Request",
         "namespace": "inference.stream_completion"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11186,7 +11214,7 @@
         "name": "Request",
         "namespace": "inference.text_embedding"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -11807,7 +11835,7 @@
       "docUrl": null,
       "name": "knn_search",
       "request": null,
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -17231,7 +17259,7 @@
         "name": "Request",
         "namespace": "_global.render_search_template"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -17632,7 +17660,7 @@
         "name": "Request",
         "namespace": "_global.scripts_painless_execute"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -21815,7 +21843,7 @@
         "name": "Request",
         "namespace": "slm.put_lifecycle"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
@@ -23366,7 +23394,7 @@
         "name": "Request",
         "namespace": "_global.terms_enum"
       },
-      "requestBodyRequired": false,
+      "requestBodyRequired": true,
       "requestMediaType": [
         "application/json"
       ],
