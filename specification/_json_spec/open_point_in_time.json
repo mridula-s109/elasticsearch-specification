@@ -30,7 +30,7 @@
         "description": "Specify the node or shard the operation should be performed on (default: random)"
       },
       "routing": {
-        "type": "string",
+        "type": "list",
         "description": "Specific routing value"
       },
       "ignore_unavailable": {
@@ -39,13 +39,13 @@
         "description": "Whether specified concrete indices should be ignored when unavailable (missing or closed)"
       },
       "expand_wildcards": {
-        "type": "enum",
+        "type": "list",
         "options": ["open", "closed", "hidden", "none", "all"],
         "default": "open",
         "description": "Whether to expand wildcard expression to concrete indices that are open, closed or both."
       },
       "keep_alive": {
-        "type": "string",
+        "type": "time",
         "description": "Specific the time to live for the point in time",
         "required": true
       },
@@ -59,9 +59,11 @@
         "description": "The number of concurrent shard requests per node executed concurrently when opening this point-in-time. This value should be used to limit the impact of opening the point-in-time on the cluster",
         "default": 5
       },
-      "project_routing": {
+      "slice": {
         "type": "string",
-        "description": "A Lucene query using project metadata tags to limit which projects to search, such as _alias:_origin or _alias:*pr*. Only supported in serverless."
+        "description": "Slice identifier for a slice-enabled index (`index.slice.enabled=true`); scopes the point in time to that slice. Defaults to `_all` (all slices) when omitted on slice-enabled indices.",
+        "visibility": "feature_flag",
+        "feature_flag": "es.slice_indexing_feature_flag_enabled"
       }
     },
     "body": {
