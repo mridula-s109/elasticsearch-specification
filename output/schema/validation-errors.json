@@ -1,5 +1,23 @@
 {
   "endpointErrors": {
+    "async_search.get": {
+      "request": [
+        "Request: missing json spec query parameter 'return_intermediate_results'"
+      ],
+      "response": []
+    },
+    "async_search.submit": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec"
+      ],
+      "response": []
+    },
+    "cat.count": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec"
+      ],
+      "response": []
+    },
     "cat.segments": {
       "request": [
         "Request: missing json spec query parameter 'ignore_unavailable'",
@@ -7,6 +25,210 @@
         "Request: missing json spec query parameter 'allow_no_indices'",
         "Request: missing json spec query parameter 'expand_wildcards'",
         "Request: missing json spec query parameter 'allow_closed'"
+      ],
+      "response": []
+    },
+    "count": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec",
+        "Request: missing json spec query parameter 'stats'"
+      ],
+      "response": []
+    },
+    "create": {
+      "request": [
+        "Request: missing json spec query parameter 'slice'"
+      ],
+      "response": []
+    },
+    "delete": {
+      "request": [
+        "Request: missing json spec query parameter 'slice'"
+      ],
+      "response": []
+    },
+    "eql.search": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec"
+      ],
+      "response": []
+    },
+    "esql.async_query": {
+      "request": [
+        "Request: missing json spec query parameter 'allow_partial_dsl_filter'"
+      ],
+      "response": []
+    },
+    "esql.query": {
+      "request": [
+        "Request: missing json spec query parameter 'allow_partial_dsl_filter'"
+      ],
+      "response": []
+    },
+    "field_caps": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec"
+      ],
+      "response": []
+    },
+    "get": {
+      "request": [
+        "Request: missing json spec query parameter 'slice'"
+      ],
+      "response": []
+    },
+    "ilm.explain_lifecycle": {
+      "request": [
+        "Request: missing json spec query parameter 'expand_wildcards'"
+      ],
+      "response": []
+    },
+    "index": {
+      "request": [
+        "Request: missing json spec query parameter 'slice'"
+      ],
+      "response": []
+    },
+    "indices.get_index_template": {
+      "request": [
+        "Request: missing json spec query parameter 'include_managed_fields'"
+      ],
+      "response": []
+    },
+    "indices.resolve_index": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec"
+      ],
+      "response": []
+    },
+    "inference.update": {
+      "request": [
+        "Request: missing json spec query parameter 'timeout'"
+      ],
+      "response": []
+    },
+    "ml.stop_datafeed": {
+      "request": [
+        "Request: missing json spec query parameter 'close_job'"
+      ],
+      "response": []
+    },
+    "monitoring.bulk": {
+      "request": [
+        "Request: different number of urls in the json spec",
+        "Request: path parameter 'type' does not exist in the json spec"
+      ],
+      "response": []
+    },
+    "open_point_in_time": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec",
+        "Request: missing json spec query parameter 'slice'"
+      ],
+      "response": []
+    },
+    "project.tags": {
+      "request": [
+        "/_project/tags: different http methods in the json spec"
+      ],
+      "response": []
+    },
+    "search": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec",
+        "Request: missing json spec query parameter 'slice'"
+      ],
+      "response": []
+    },
+    "search_mvt": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec"
+      ],
+      "response": []
+    },
+    "search_template": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec"
+      ],
+      "response": []
+    },
+    "security.get_role": {
+      "request": [
+        "Request: missing json spec query parameter 'include_implicit'"
+      ],
+      "response": []
+    },
+    "security.get_service_accounts": {
+      "request": [
+        "Request: missing json spec query parameter 'type'"
+      ],
+      "response": []
+    },
+    "snapshot.repository_analyze": {
+      "request": [
+        "Request: missing json spec query parameter 'check_overwrite_protection'"
+      ],
+      "response": []
+    },
+    "sql.query": {
+      "request": [
+        "Request: query parameter 'project_routing' does not exist in the json spec"
+      ],
+      "response": []
+    },
+    "streams.logs_disable": {
+      "request": [
+        "Request: url path '/_streams/logs/_disable' not found in the json spec",
+        "Request: missing json spec path parameter 'name'"
+      ],
+      "response": []
+    },
+    "streams.logs_enable": {
+      "request": [
+        "Request: url path '/_streams/logs/_enable' not found in the json spec",
+        "Request: missing json spec path parameter 'name'"
+      ],
+      "response": []
+    },
+    "synonyms.get_synonym": {
+      "request": [
+        "Request: missing json spec query parameter 'search_after'"
+      ],
+      "response": []
+    },
+    "synonyms.put_synonym": {
+      "request": [
+        "Request: missing json spec query parameter 'append'"
+      ],
+      "response": []
+    },
+    "tasks.get": {
+      "request": [
+        "Request: missing json spec query parameter 'follow_relocations'"
+      ],
+      "response": []
+    },
+    "transform.get_transform_stats": {
+      "request": [
+        "Request: missing json spec query parameter 'basic'"
+      ],
+      "response": []
+    },
+    "transform.schedule_now_transform": {
+      "request": [
+        "Request: missing json spec query parameter 'defer'"
+      ],
+      "response": []
+    },
+    "transform.start_transform": {
+      "request": [
+        "Request: missing json spec query parameter 'initial_delay'"
+      ],
+      "response": []
+    },
+    "update": {
+      "request": [
+        "Request: missing json spec query parameter 'slice'"
       ],
       "response": []
     }

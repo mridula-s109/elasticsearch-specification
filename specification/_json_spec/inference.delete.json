@@ -26,8 +26,16 @@
           "methods": ["DELETE"],
           "parts": {
             "task_type": {
-              "type": "string",
-              "description": "The task type"
+              "type": "enum",
+              "description": "The task type",
+              "options": [
+                "chat_completion",
+                "completion",
+                "embedding",
+                "rerank",
+                "sparse_embedding",
+                "text_embedding"
+              ]
             },
             "inference_id": {
               "type": "string",

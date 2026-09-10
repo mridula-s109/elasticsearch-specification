@@ -1,8 +1,8 @@
 {
-  "indices.get_sample": {
+  "project.get_routing": {
     "documentation": {
-      "url": "https://www.elastic.co/docs/api/doc/elasticsearch/operation/operation-indices-get-sample",
-      "description": "Get random sample of ingested data"
+      "url": "https://www.elastic.co/docs/api/doc/elasticsearch#TODO",
+      "description": "Get named project routing expression"
     },
     "stability": "experimental",
     "visibility": "public",
@@ -12,12 +12,12 @@
     "url": {
       "paths": [
         {
-          "path": "/{index}/_sample",
+          "path": "/_project_routing/{name}",
           "methods": ["GET"],
           "parts": {
-            "index": {
+            "name": {
               "type": "string",
-              "description": "The name of a data stream or index"
+              "description": "The name of the project routing expression"
             }
           }
         }
