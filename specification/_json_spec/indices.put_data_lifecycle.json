@@ -26,7 +26,7 @@
     },
     "params": {
       "expand_wildcards": {
-        "type": "enum",
+        "type": "list",
         "options": ["open", "closed", "hidden", "none", "all"],
         "default": "open",
         "description": "Whether wildcard expressions should get expanded to open or closed indices (default: open)"
@@ -43,7 +43,7 @@
       }
     },
     "body": {
-      "description": "The data stream lifecycle configuration that consist of the data retention",
+      "description": "The data stream lifecycle configuration, supporting fields: 'enabled', 'data_retention', 'downsampling', and 'frozen_after'",
       "required": true
     }
   }
