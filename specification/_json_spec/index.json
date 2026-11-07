@@ -35,6 +35,40 @@
               "description": "The name of the index"
             }
           }
+        },
+        {
+          "path": "/{index}/{_slice}/_doc/{id}",
+          "methods": ["PUT", "POST"],
+          "parts": {
+            "id": {
+              "type": "string",
+              "description": "Document ID"
+            },
+            "index": {
+              "type": "string",
+              "description": "The name of the index"
+            },
+            "_slice": {
+              "type": "string",
+              "description": "Slice identifier for a slice-enabled index (`index.slice.enabled=true`); scopes the operation to that slice",
+              "feature_flag": "es.slice_indexing_feature_flag_enabled"
+            }
+          }
+        },
+        {
+          "path": "/{index}/{_slice}/_doc",
+          "methods": ["POST"],
+          "parts": {
+            "index": {
+              "type": "string",
+              "description": "The name of the index"
+            },
+            "_slice": {
+              "type": "string",
+              "description": "Slice identifier for a slice-enabled index (`index.slice.enabled=true`); scopes the operation to that slice",
+              "feature_flag": "es.slice_indexing_feature_flag_enabled"
+            }
+          }
         }
       ]
     },
@@ -56,7 +90,7 @@
         "description": "If `true` then refresh the affected shards to make this operation visible to search, if `wait_for` then wait for a refresh to make this operation visible to search, if `false` (the default) then do nothing with refreshes."
       },
       "routing": {
-        "type": "string",
+        "type": "list",
         "description": "Specific routing value"
       },
       "timeout": {
