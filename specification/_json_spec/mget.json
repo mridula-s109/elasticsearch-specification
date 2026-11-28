@@ -25,6 +25,21 @@
               "description": "The name of the index"
             }
           }
+        },
+        {
+          "path": "/{index}/{_slice}/_mget",
+          "methods": ["GET", "POST"],
+          "parts": {
+            "index": {
+              "type": "string",
+              "description": "The name of the index"
+            },
+            "_slice": {
+              "type": "string",
+              "description": "Default slice identifier for a slice-enabled index (`index.slice.enabled=true`); applied to items that don't provide their own",
+              "feature_flag": "es.slice_indexing_feature_flag_enabled"
+            }
+          }
         }
       ]
     },
@@ -55,7 +70,7 @@
         "description": "Refresh the shard containing the document before performing the operation"
       },
       "routing": {
-        "type": "string",
+        "type": "list",
         "description": "Specific routing value"
       },
       "_source": {
